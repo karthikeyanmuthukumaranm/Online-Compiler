@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML/CSS/JS Code Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+  <header>
+    <span>🧑‍💻 Online Web Editor</span>
+    <button id="toggleTheme">🌞</button>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="html">HTML</div>
+    <div class="tab" data-tab="css">CSS</div>
+    <div class="tab" data-tab="js">JavaScript</div>
+  </div>
+
+  <div id="html" class="editor-container active">
+    <textarea id="htmlCode" placeholder="Write HTML code here..."></textarea>
+  </div>
+  <div id="css" class="editor-container">
+    <textarea id="cssCode" placeholder="Write CSS code here..."></textarea>
+  </div>
+  <div id="js" class="editor-container">
+    <textarea id="jsCode" placeholder="Write JavaScript code here..."></textarea>
+  </div>
+
+  <div class="buttons">
+    <button onclick="runWebCode()">▶ Run</button>
+  </div>
+
+  <iframe id="output"></iframe>
+
+  <script src="script.js"></script>
+</body>
+</html>

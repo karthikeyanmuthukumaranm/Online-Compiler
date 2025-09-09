@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header-bg);
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+#toggleTheme {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  background: var(--tab-bg);
+}
+
+.tab {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  background: var(--tab-bg);
+  color: var(--text);
+}
+
+.tab.active {
+  background: var(--header-bg);
+  border-bottom: 3px solid #00bcd4;
+}
+
+.editor-container {
+  display: none;
+}
+
+.editor-container.active {
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  height: 250px;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 1rem;
+  background: var(--editor-bg);
+  color: var(--text);
+  border: none;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--tab-bg);
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  background: #00bcd4;
+  border: none;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  background: white;
+}
+
+/* Dark mode */
+body.dark {
+  --header-bg: #333;
+  --tab-bg: #222;
+  --editor-bg: #1e1e1e;
+  --text: #fff;
+}
+
+/* Light mode */
+body.light {
+  --header-bg: #f0f0f0;
+  --tab-bg: #ddd;
+  --editor-bg: #fff;
+  --text: #000;
+}
